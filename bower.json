@@ -1,0 +1,27 @@
+{
+  "name": "bytes_dashboard_webapp",
+  "version": "0.0.1",
+  "homepage": "https://github.com/Greplr/bytes_dashboard_webapp",
+  "authors": [
+    "Arnav Gupta <championswimmer@gmail.com>"
+  ],
+  "description": "Bytes dashboard for Restaurant owners",
+  "main": "index.html",
+  "moduleType": [
+    "es6"
+  ],
+  "license": "GPLv3",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.4.3",
+    "angular-material": "~0.10.0",
+    "angular-ui-router": "~0.2.15",
+    "ngstorage": "~0.3.7"
+  }
+}

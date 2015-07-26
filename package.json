@@ -1,0 +1,21 @@
+{
+  "name": "bytes_dashboard_webapp",
+  "version": "0.0.1",
+  "description": "Bytes dashboard for Restaurant Owners",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Greplr/bytes_dashboard_webapp"
+  },
+  "author": "Arnav Gupta <arnav@greplr.com>",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/Greplr/bytes_dashboard_webapp/issues"
+  },
+  "devDependencies": {
+    "bower": "~1.4.1"
+  }
+}

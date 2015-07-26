@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="bytes" ng-controller="AppController as appCtrl">
+<head>
+
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+</head>
+<body layout="column">
+
+    <md-toolbar layout="row">
+        <div class="md-toolbar-tools">
+            <md-button ng-click="appCtrl.toggleSidenav('left')" hide-gt-md class="md-icon-button">
+                <md-icon aria-label="Menu" md-svg-icon="assets/img/ic_toolbar_menu.svg"></md-icon>
+            </md-button>
+            <h1 id="title"> McDonalds, Epicuria, Nehru Place </h1>
+        </div>
+    </md-toolbar>
+    <md-subheader class="md-accent"><h2> BYTES - Restaurant Dashboard </h2></md-subheader>
+
+    <div layout="row" flex>
+        <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2"
+                    style="width: 504px; min-width: 504px;"
+                    md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+            <div ng-include src="'app//sidebar/sidebar.html'"></div>
+        </md-sidenav>
+
+        <md-content flex layout-padding>
+            <div layout="column" layout-fill layout-align="top center">
+                <div ui-view></div>
+            </div>
+            <div flex></div>
+        </md-content>
+    </div>
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+
+    <script src="app.js"></script>
+    <script src="app/ApiJsonFactory.js"></script>
+    <script src="app/sidebar/SidebarController.js"></script>
+</body>
+</html>

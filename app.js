@@ -14,7 +14,7 @@ bytesApp.config(['$urlRouterProvider', '$httpProvider', function($urlRouterProvi
     $httpProvider.defaults.useXDomain = true;
     delete $httpProvider.defaults.headers.common['X-Requested-With'];
 
-    $urlRouterProvider.otherwise('/1');
+    //$urlRouterProvider.otherwise('/1');
 }]);
 bytesApp.controller('AppController',
     ['$mdSidenav', '$mdMedia', '$sessionStorage', '$state', 'ApiJsonFactory',

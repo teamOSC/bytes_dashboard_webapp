@@ -7,7 +7,8 @@ var bytesApp = angular.module('bytes', [
     'ui.router',
     'ngMaterial',
     'ngStorage',
-    'bytes.sidebar'
+    'bytes.sidebar',
+    'bytes.orderinfo'
 ]);
 bytesApp.config(['$urlRouterProvider', '$httpProvider', function($urlRouterProvider, $httpProvider) {
 
@@ -26,6 +27,8 @@ bytesApp.controller('AppController',
             };
 
             app.$storage = $sessionStorage;
+            app.$storage.$reset();
+
             if ( app.$storage.orders === null ||
                 typeof(app.$storage.orders) == 'undefined')
             {

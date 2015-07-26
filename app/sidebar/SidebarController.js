@@ -11,12 +11,14 @@ sidenavModule.controller("SidebarController", ['$mdSidenav', '$mdMedia', '$state
             console.log($state.current.name);
             console.log($state.current);
         };
-        this.showOrder = function(orderId) {
+        this.showOrder = function(order) {
             this.toggleSidenav('left');
-            $state.go('order', {oid: orderId});
-            console.log($state.current.name);
-            console.log($state.current);
-            console.log(orderId);
+            $state.go('order', {oid: order.order_id});
+            //console.log($state.current.name);
+            //console.log($state.current);
+            //console.log(orderId);
+            side.$storage.currentOrder = order;
+
         };
 
         var side = this;
@@ -24,10 +26,3 @@ sidenavModule.controller("SidebarController", ['$mdSidenav', '$mdMedia', '$state
 
 
     }]);
-
-sidenavModule.config(['$stateProvider', function($stateProvider) {
-    $stateProvider.state('order', {
-        url: '/order/1/:oid',
-        controller: 'SidebarController'
-    });
-}]);

@@ -3,18 +3,21 @@
 
         <md-list-item class="md-3-line"
                       ng-repeat="order in sideCtrl.$storage.orders"
-                      ng-click="sideCtrl.showOrder(order.order_id)"
+                      ng-click="sideCtrl.showOrder(order)"
                       ui-sref="order({ orderId: 1 })">
             <div class="md-list-item-text">
                 <md-ink-ripple>
-                    <div class="md-whiteframe-z1 md-padding" >
+                    <div class="md-whiteframe-z1 md-padding">
                         <h3> {{order.username}} </h3>
                         <h4> Rs. {{order.amount}} </h4>
                         <p>
                             <span class="md-caption"> {{order.order_id}} </span>
                             <br>
-                            Chicken McGrill, Fries
+                        <md-chips>
+                            <md-chip ng-repeat="oItem in order.order"> {{oItem.item}} </md-chip>
+                        </md-chips>
                         </p>
+
                     </div>
                 </md-ink-ripple>
             </div>

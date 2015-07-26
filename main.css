@@ -1,0 +1,12 @@
+.food-option {
+    float: left;
+    width: 20%;
+    box-sizing: border-box;
+    padding: 10px 10px;
+}
+
+.food-option .md-item-text {
+    padding: 8px;
+    background: #F0F0F0 none repeat scroll 0% 0%;
+    border-radius: 3px;
+}

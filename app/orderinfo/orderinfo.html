@@ -1,0 +1,13 @@
+<md-content ng-controller="OrderInfoController as oiCtrl">
+{{oiCtrl.thisOrder.username}}
+
+    <md-list>
+        <md-list-item class="md-2-line food-option" ng-repeat="oItem in oiCtrl.thisOrder.order" layout="row"
+                      layout-wrap>
+            <div class="md-item-text md-whiteframe-z1" flex>
+                <h3>{{oItem.item}}</h3>
+                <p>{{oItem.quantity}}</p>
+            </div>
+        </md-list-item>
+    </md-list>
+</md-content>

@@ -37,7 +37,7 @@ bytesApp.controller('AppController',
             app.Orders = app.$storage.orders;
 
             if (app.Orders.length === 0) {
-                ApiJsonFactory.getJson('outlets/orders/1')
+                ApiJsonFactory.getJson('outlets/orders/2')
                     .then(function (response) {
                         app.Orders = response.data;
                         app.$storage.orders = app.Orders;

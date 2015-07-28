@@ -1,5 +1,15 @@
 <md-content ng-controller="OrderInfoController as oiCtrl">
-{{oiCtrl.thisOrder.username}}
+
+    <md-list>
+        <md-list-item class="md-3-line">
+            <img ng-src="assets/prof_pic.jpg" class="md-avatar" alt="{{oiCtrl.thisOrder.username}}" />
+            <div class="md-list-item-text">
+                <h3>{{ oiCtrl.thisOrder.username }}</h3>
+                <h4> Order Amt: Rs.{{ oiCtrl.thisOrder.amount }}</h4>
+                <p> Order ID : {{ oiCtrl.thisOrder.order_id }}</p>
+            </div>
+        </md-list-item>
+    </md-list>
 
     <md-list>
         <md-list-item class="md-2-line food-option" ng-repeat="oItem in oiCtrl.thisOrder.order" layout="row"
@@ -10,4 +20,7 @@
             </div>
         </md-list-item>
     </md-list>
+    <md-button class="md-fab" aria-label="Order Done" ng-click="oiCtrl.sendConfirm()">
+        <md-icon><img src="assets/tick.png"/></md-icon>
+    </md-button>
 </md-content>
